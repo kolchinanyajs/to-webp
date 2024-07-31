@@ -1,13 +1,13 @@
-import imagemin from 'imagemin';
-import imageminWebp from 'imagemin-webp';
+import imagemin from "imagemin";
+import imageminWebp from "imagemin-webp";
 
-imagemin(['./images/**/*.{jpg,png}'], {
-  destination: './webp/',
+imagemin(["./images/**/*.{jpg,png}"], {
+  destination: "./webp/",
   plugins: [
     imageminWebp({
-      quality: 85,
+      quality: 90,
     }),
   ],
 }).then(() => {
-  console.log('🎉 Successfully');
+  console.log("🎉 Successfully");
 });
